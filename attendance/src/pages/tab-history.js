@@ -63,7 +63,7 @@ const TabHistory = () => {
                                     <tr key={index}>
                                         <th scope="row">{index + 1}</th>
                                         <td>{item.id_card}</td>
-                                        <td>{item.maSV}</td>
+                                        <td>{item.studentId}</td>
                                         <td>{item.date_time_in ? convertDateTime(item.date_time_in) : '--'}</td>
                                         <td>{item.date_time_out ? convertDateTime(item.date_time_out) : '--'}</td>
                                     </tr>

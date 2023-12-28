@@ -184,7 +184,7 @@
 
 import axios from 'axios';
 
-var baseURL = 'http://172.31.98.103:42600/api/'
+var baseURL = 'http://10.0.0.31:42600/api/'
 
 const axios_mysql = axios.create({
     baseURL: baseURL,

@@ -32,9 +32,9 @@ const TabHome = (props) => {
         if (res) {
             if (res.length > 0) {
                 setCardId(cardId);
-                setUserName(res[0].maSV);
+                setUserName(res[0].studentId);
                 setTimeCreate(convertDateTime(res[0].create_time));
-                props.wsSend(res[0].maSV.normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
+                props.wsSend(res[0].studentId.normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
                 checkSateHistory(props.cardId);
             }
             else {
@@ -128,7 +128,7 @@ const TabHome = (props) => {
                                         <tr key={index}>
                                             <th scope="row">{index + 1}</th>
                                             <td>{item.id_card}</td>
-                                            <td>{item.maSV}</td>
+                                            <td>{item.studentId}</td>
                                             <td>{item.date_time_in ? convertDateTime(item.date_time_in) : '--'}</td>
                                             <td>
                                                 {item.date_time_out ? convertDateTime(item.date_time_out) : '--'}

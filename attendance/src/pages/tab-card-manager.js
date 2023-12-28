@@ -25,7 +25,7 @@ const ModalAdd = (props) => {
                 else {
                     let data = {
                         id_card: cardId,
-                        maSV: userName,
+                        studentId: userName,
                         create_time: getDateTime()
                     }
                     let res = await addUser(data);
@@ -136,7 +136,7 @@ const TabCardManager = (props) => {
             if (newCardID.length > 0 && newUserName.length > 0) {
                 let data = [{
                     id_card: newCardID,
-                    maSV: newUserName,
+                    studentId: newUserName,
                 }, props.dataRow.id];
                 let res = await editUser(data);
                 if (res) {
@@ -227,7 +227,7 @@ const TabCardManager = (props) => {
                                         <tr key={item.id}>
                                             <th scope="row">{index + 1}</th>
                                             <td>{item.id_card}</td>
-                                            <td>{item.maSV}</td>
+                                            <td>{item.studentId}</td>
                                             <td>{convertDateTime(item.create_time)}</td>
                                             <td>
                                                 <button

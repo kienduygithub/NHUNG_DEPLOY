@@ -5,7 +5,7 @@ const History = function () { }
 
 History.all = function (data, result) {
     try {
-        var queryString = `SELECT history.id, history.id_card, user.maSV, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card ORDER BY id DESC`;
+        var queryString = `SELECT history.id, history.id_card, user.studentId, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card ORDER BY id DESC`;
 
         db.query(queryString, function (err, table) {
             if (err) {
@@ -35,7 +35,7 @@ History.all = function (data, result) {
 
 History.getLimit = function (data, result) {
     try {
-        var queryString = `SELECT history.id, history.id_card, user.maSV, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card ORDER BY id DESC LIMIT ${data.limit}`;
+        var queryString = `SELECT history.id, history.id_card, user.studentId, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card ORDER BY id DESC LIMIT ${data.limit}`;
 
         db.query(queryString, function (err, table) {
             if (err) {
@@ -65,7 +65,7 @@ History.getLimit = function (data, result) {
 
 History.getByCardId = function (data, result) {
     try {
-        var queryString = `SELECT history.id, history.id_card, user.maSV, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card WHERE history.id_card = "${data.id_card}" AND history.date_time_in BETWEEN '${data.from}' AND '${data.to}' ORDER BY history.id DESC LIMIT 1`;
+        var queryString = `SELECT history.id, history.id_card, user.studentId, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card WHERE history.id_card = "${data.id_card}" AND history.date_time_in BETWEEN '${data.from}' AND '${data.to}' ORDER BY history.id DESC LIMIT 1`;
 
         db.query(queryString, function (err, table) {
             if (err) {
@@ -95,7 +95,7 @@ History.getByCardId = function (data, result) {
 
 History.filter = function (from, to, sort, result) {
     try {
-        var queryString = `SELECT history.id, history.id_card, user.maSV, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card WHERE date_time_in BETWEEN '${from}' AND '${to}' ORDER BY id ${sort}`;
+        var queryString = `SELECT history.id, history.id_card, user.studentId, history.date_time_in, history.date_time_out FROM history INNER JOIN user ON history.id_card = user.id_card WHERE date_time_in BETWEEN '${from}' AND '${to}' ORDER BY id ${sort}`;
         db.query(queryString, function (err, table) {
             if (err) {
                 result(
