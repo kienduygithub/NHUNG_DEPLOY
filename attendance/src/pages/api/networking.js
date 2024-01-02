@@ -184,8 +184,8 @@
 
 import axios from 'axios';
 
-var baseURL = 'http://10.0.0.31:42600/api/'
-
+var baseURL = 'http://172.20.10.4:42600/api/'
+// var baseURL = 'https://nhung-deploy.onrender.com/api/'
 const axios_mysql = axios.create({
     baseURL: baseURL,
     headers: {

@@ -114,7 +114,7 @@ const TabHome = (props) => {
                     <table className="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">STT</th>
+                                <th scope="col" style={{ textAlign: 'center' }}>STT</th>
                                 <th scope="col">ID Card</th>
                                 <th scope="col">Mã Sinh viên</th>
                                 <th scope="col">Thời gian vào</th>
@@ -126,7 +126,7 @@ const TabHome = (props) => {
                                 data.map((item, index) => {
                                     return (
                                         <tr key={index}>
-                                            <th scope="row">{index + 1}</th>
+                                            <th scope="row" style={{ textAlign: "center" }}>{index + 1}</th>
                                             <td>{item.id_card}</td>
                                             <td>{item.studentId}</td>
                                             <td>{item.date_time_in ? convertDateTime(item.date_time_in) : '--'}</td>

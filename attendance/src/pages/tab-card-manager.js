@@ -46,7 +46,7 @@ const ModalAdd = (props) => {
         }
     }
 
-    function onCanelClick() {
+    function onCancelClick() {
         setCardId("");
         setUserName("");
     }
@@ -57,7 +57,7 @@ const ModalAdd = (props) => {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h1 className="modal-title fs-5" id="exampleModalLabel">Thêm thẻ</h1>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={onCanelClick} />
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={onCancelClick} />
                     </div>
                     <div className="modal-body">
                         <div className="input-group mb-3">
@@ -82,7 +82,7 @@ const ModalAdd = (props) => {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button id='closeModal' type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={onCanelClick} >Close</button>
+                        <button id='closeModal' type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={onCancelClick} >Close</button>
                         <button type="button" className="btn btn-primary" onClick={Save}>Save</button>
                     </div>
                 </div>

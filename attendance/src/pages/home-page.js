@@ -60,18 +60,11 @@ const HomePage = (props) => {
     return (
         <div className={styles.myContainer}>
             <div className={styles.header}>
-                {/* <div className={styles.containerLogo}>
-                    <Image
-                        src={logo}
-                        width={120}
-                        height={'auto'}
-                        className={styles.logo}
-                    />
-                </div> */}
+
                 <span className={styles.headerTitle}>ĐIỂM DANH SINH VIÊN</span>
-                <div 
+                <div
                     onClick={() => props.isLoginSuccess(false)}
-                    style={{display: 'flex', alignItems: 'center', gap: '5px', position: 'absolute', top:'48px', right: '100px', userSelect: 'none', cursor: 'pointer'}}
+                    style={{ display: 'flex', alignItems: 'center', gap: '5px', position: 'absolute', top: '48px', right: '100px', userSelect: 'none', cursor: 'pointer' }}
                     className={styles.headerLogOut}
                 >
                     <FontAwesomeIcon icon={faSignOut} fontSize={15} />
@@ -158,16 +151,8 @@ const HomePage = (props) => {
                         <TabCardManager
                             trigger={triggerTabCardManager}
                             cardIdAdd={cardIdAdd}
-                            triggerNewCardAdd = {triggerNewCardAdd}
+                            triggerNewCardAdd={triggerNewCardAdd}
                         />
-                    </div>
-                    <div
-                        className="tab-pane fade"
-                        id="v-pills-settings"
-                        role="tabpanel"
-                        aria-labelledby="v-pills-settings-tab"
-                        tabIndex={0}>
-                        <TabInfo />
                     </div>
                 </div>
             </div>

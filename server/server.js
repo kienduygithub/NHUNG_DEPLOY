@@ -39,19 +39,19 @@ Các routers
 require('./app/routers/history.router')(app);
 require('./app/routers/user.router')(app);
 require('./app/routers/admin.router')(app);
-app.get('/', (req, res) => {
-    fs.readFile('./index.html', (error, content) => {
-        if (error) {
-            res.writeHead(500);
-            res.end('Internal server error');
-        } else {
-            res.writeHead(200, {
-                'Content-Type': 'text/html'
-            });
-            res.end(content);
-        }
-    });
-});
+// app.get('/', (req, res) => {
+//     fs.readFile('./index.html', (error, content) => {
+//         if (error) {
+//             res.writeHead(500);
+//             res.end('Internal server error');
+//         } else {
+//             res.writeHead(200, {
+//                 'Content-Type': 'text/html'
+//             });
+//             res.end(content);
+//         }
+//     });
+// });
 
 const clients = [];
 
